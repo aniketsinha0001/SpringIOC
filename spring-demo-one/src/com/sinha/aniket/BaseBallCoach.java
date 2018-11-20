@@ -2,10 +2,25 @@ package com.sinha.aniket;
 
 public class BaseBallCoach implements Coach{
 
+	private FortuneService fortuneService;
+	
 	@Override
 	public String getDailyWorkout() {
 		// TODO Auto-generated method stub
 		return "Pratice 2 hrs Batting daily!";
 	}
+
+	
+	BaseBallCoach(HappyFortuneService fortuneService){
+		this.fortuneService=fortuneService;
+	}
+	
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return fortuneService.getFortune();
+	}
+	
+		
 
 }

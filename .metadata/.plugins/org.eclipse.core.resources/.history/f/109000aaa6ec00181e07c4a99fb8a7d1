@@ -1,0 +1,11 @@
+package com.sinha.aniket;
+
+public class BaseBallCoach implements Coach{
+
+	@Override
+	public String getDailyWorkout() {
+		// TODO Auto-generated method stub
+		return "Pratice 2 hrs Batting daily!";
+	}
+
+}

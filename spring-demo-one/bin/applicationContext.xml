@@ -9,7 +9,10 @@
 
     <!-- Define your beans here -->
     
-    <bean id="myCoach" class="com.sinha.aniket.BaseBallCoach">
+    <bean id="myFortune" class="com.sinha.aniket.HappyFortuneService"></bean>
+    
+    <bean id="myCoach" class="com.sinha.aniket.TrackCoach">
+    <constructor-arg ref="myFortune"></constructor-arg>
     </bean>
     
 </beans>

@@ -1,0 +1,5 @@
+package com.sinha.aniket;
+
+public class HappyFortuneService implements FortuneService{
+
+}

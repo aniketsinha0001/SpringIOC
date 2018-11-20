@@ -1,0 +1,24 @@
+package com.sinha.aniket;
+
+public class TrackCoach implements Coach{
+
+	private FortuneService fortuneService;
+	
+	TrackCoach(FortuneService fortuneService){
+		
+		this.fortuneService=fortuneService;
+	}
+	
+	@Override
+	public String getDailyWorkout() {
+		// TODO Auto-generated method stub
+		return "Run Fast for 30 minutes continuously!";
+	}
+
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return "Message From TrackCoach";
+	}
+
+}
