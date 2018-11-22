@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Load the properties Files sport.properties -->
+	<context:property-placeholder location="classpath:sport.properties"/>
+	
+    <!-- Define your beans here -->
+    <bean id="fortune" class="com.sinha.aniket.HappyFortuneService"></bean>
+    
+        
+    
+    <bean id="cricket" class="com.sinha.aniket.CricketCoach">
+    <!-- setter Injection -->
+    <property name="fortuneService" ref="fortune"></property>
+    
+    <!--Injecting Literal Values -->
+    <property name="emailAddress" value="iamaniketsinha@gmail.com"></property>
+    <property name="teamName" value="RCB"></property>
+    
+    <!-- Injecting Value from properties File to literals -->
+    <property name="captain" value="${team.captain}"></property>
+    <property name="playerName" value="${team.playerName}"></property>
+    
+    </bean>
+    
+    <bean id="track" class="com.sinha.aniket.TrackCoach">
+    <!-- Constructor Injection -->
+    <constructor-arg ref="fortune"></constructor-arg>
+    
+    </bean>
+    
+    
+</beans>
+
+
+
+
+
