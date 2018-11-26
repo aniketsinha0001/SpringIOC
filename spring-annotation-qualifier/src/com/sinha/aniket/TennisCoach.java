@@ -1,5 +1,8 @@
 package com.sinha.aniket;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -26,6 +29,16 @@ public class TennisCoach implements Coach {
 		// TODO Auto-generated method stub
 		return fs.getFortune();
 			
+	}
+	
+	@PostConstruct
+	public void doMystsartUpStuff(){
+		System.out.println("Inside method startupstuff");
+	}
+	
+	@PreDestroy
+	public void doMyCleanUpStuff(){
+		System.out.println("Inside the CleanUpStuff");
 	}
 
 }

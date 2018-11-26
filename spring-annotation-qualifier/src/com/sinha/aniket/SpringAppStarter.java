@@ -13,6 +13,8 @@ public class SpringAppStarter {
 		System.out.println(c1.getDailyWorkOut());
 		
 		System.out.println(c1.getDailyFortune());
+		
+		context.close();
 
 	}
 
