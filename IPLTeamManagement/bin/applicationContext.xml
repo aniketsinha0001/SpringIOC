@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> 
+		
+		
+		<context:property-placeholder location="classpath:properties.properties"/>
+		<bean id="csk" class="com.t20.ipl.CSK">
+			<constructor-arg value="MS Dhoni!"></constructor-arg>		
+			
+			<property name="players">
+				<set>
+					<value>Sikhar Dhawan</value>
+					<value>Ravindra Jadeja</value>
+					<value>Bhubneshwar kr</value>
+					<value>Ambati Rayadu</value>
+				</set>
+			
+			</property>
+		</bean>
+			 
+				<bean id="mi" class="com.t20.ipl.MI">
+				
+						<constructor-arg value="Rohit Sharma!"></constructor-arg>
+						<constructor-arg value="Dinesh kartik!"></constructor-arg>
+				
+					
+						
+				</bean> 
+					<bean id="mis" class="com.t20.ipl.MI">
+						<constructor-arg value="Jasprit Bumrah!"></constructor-arg>
+						<constructor-arg value="Sachin Tendulkar!"></constructor-arg>
+						<constructor-arg value="Yuvraj Singh!"></constructor-arg></bean>
+				               
+           <bean id="kkr" class="com.t20.ipl.KKR">
+               		<property name="captain" value="Sunil nararine!"></property>
+                		
+                		<property name="players">
+                			<list>
+                				 <value>Gautam</value>
+             		  			 <value>Ganguly</value>
+             		  			 <value>Pathan!</value>
+               				 </list>
+                		</property>       	
+                	
+                	</bean>   
+                	
+           <bean id="rcb" class="com.t20.ipl.RCB">
+           		<constructor-arg value="Virat Kohli!" type="String"></constructor-arg>  
+           		<property name="player1" value="${player1}"></property>   	
+           </bean>
+           
+           
+</beans>
