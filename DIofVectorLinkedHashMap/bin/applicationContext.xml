@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+  		
+
+		<bean id="tict" class="com.sinha.aniket.TechnoIndia">
+			<property name="branch">
+				<util:list list-class="java.util.Vector">
+					<value>CSE</value>
+					<value>IT</value>
+					<value>EE</value>
+					<value>ECE</value>
+				</util:list>	
+			</property>
+		
+		</bean>
+		<bean id="gcect" class="com.sinha.aniket.GCECT">
+			<property name="branchwiseFees">
+				<util:map map-class="java.util.LinkedHashMap">
+					<entry key="CSE" value="20k!"></entry>
+					<entry key="IT" value="8K!"></entry>
+					<entry key="EE" value="10K!"></entry>
+				</util:map>
+			
+			
+			</property>
+				
+		
+		</bean>
+
+
+</beans>
