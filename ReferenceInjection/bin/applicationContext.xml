@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> 
+  
+  
+  	<bean id="engine1" class="com.sinha.aniket.Engine">
+  			<property name="modelYear" value="2015"/> 	
+  		</bean>
+  		
+  		  
+  	<bean id="engine2" class="com.sinha.aniket.Engine">
+  			<property name="modelYear" value="2020"/> 	
+  		</bean>
+  		
+  		  
+  	<bean id="engine3" class="com.sinha.aniket.Engine">
+  			<property name="modelYear" value="2005"/> 	
+  		</bean>
+  		
+  
+  		<bean id="mycar" class="com.sinha.aniket.Car">
+  			<property name="engine">
+  				<list>
+  					<ref bean="engine1"></ref>
+  					<ref bean="engine2"></ref>
+  					<ref bean="engine3"></ref>
+  				</list>
+  			
+  			</property>
+  			
+  			<property name="carName">
+  				<list>
+  					<value>Audi!</value>
+  					<value>BMW!</value>
+  					<value>Lamborgini!</value>
+  				</list>			  			
+  			</property> 		
+  		</bean>
+        
+</beans>
